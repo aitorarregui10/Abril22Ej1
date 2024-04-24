@@ -1,0 +1,17 @@
+<h1>Inmuebles Futuro</h1>
+<h2>Inmuebles Disponibles</h2>
+    <div class="inmueble">
+        <ul>
+            @for (inmueble of info; track inmueble){
+                <div>
+                    <img [src]="inmueble.imagen" alt="{{inmueble.nombre}}" width="300">
+                    <div>
+                        <h3>{{ inmueble.nombre }}</h3>
+                        <p>{{ inmueble.descrip }}</p>
+                        <button [routerLink]="['/info',inmueble.descripcion]">{{inmueble.nombre}}</button>
+                    </div>
+                </div>
+            }
+        </ul>
+    </div>
+ 
